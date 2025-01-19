@@ -1,0 +1,119 @@
+route_id,incoming_bus,route_name
+4451_86188,1,1. Sandymount - O'Connell Street - Santry
+4451_86109,4,4. Monkstown Avenue - Harristown
+4451_86107,6,6. Howth Dart Stn - Lower Abbey Street
+4451_86151,7,7. Brides Glen Luas - Mountjoy Square
+4451_86152,7A,7A. Loughlinstown - Mountjoy Sq
+4451_86153,7B,7B. Shankill - Mountjoy Square
+4451_86154,7D,7D. Dalkey - Mountjoy Square
+4451_86155,7E,7E. Mountjoy Square - Dalkey
+4451_86183,9,9. Limekiln Avenue - Charlestown
+4451_86108,11,11. Sandyford Ind Estate - Wadelai Pk
+4451_86110,13,13. Grange Castle - Harristown
+4451_86111,14,14. Dundrum Luas Stn - Ardlea Rd (Beaumont)
+4451_86112,15,15. Ballycullen Road - Clongriffin
+4451_86218,15A,15A. Merrion Square - Limekiln Avenue
+4451_86216,15B,15B. Merrion Square - Stocking Avenue
+4451_86217,15D,15D. Merrion Square - Whitechurch
+4451_86113,16,16. Ballinteer - Dublin Airport
+4451_86114,16D,16D. Airport - Beaumont Village - Ballinteer not
+4451_86116,26,26. Fonthill Rd (Liffey Valley) - Merrion Square
+4451_86117,27,27. Jobstown - Clare Hall
+4451_86160,27A,27A. Blunden Drive - Eden Quay
+4451_86220,27B,27B. Eden Quay - Harristown
+4451_86118,27X,27X. Clare Hall - UCD Belfield
+4451_86120,32X,32X. UCD Belfield - Malahide
+4451_86121,33,33. Balbriggan - Lower Abbey St
+4451_86123,33D,33D. Portrane - St Stephens Green
+4451_86124,33E,33E. Lwr Abbey St - Portrane - Skerries
+4451_86122,33X,33X. Skerries - Custom House Quay / St Stephen Green
+4451_86125,37,37. Blanchardstown Shopping Centre - Wilton Terrace
+4451_86126,38,38. Damastown - Burlington Road
+4451_86127,38A,38A. Damastown via Navan Rd - Burlington Rd
+4451_86128,38B,38B. Damastown via Ballycoolin Ind Est - Burlington Rd
+4451_86130,38D,38D. IBM Damastown via N3 - Burlington Rd
+4451_86133,39,39. Ongar - Burlington Rd
+4451_86134,39A,39A. Ongar - UCD Belfield
+4451_86132,39X,39X. Ongar - Burlington Road
+4451_86135,40,40. Charlestown Shopping Centre - Earlsfort Terrace
+4451_86136,40B,40B. Toberburr - Parnel Street
+4451_86138,40D,40D. Tyrrelstown - Parnell Street
+4451_86137,40E,40E. Broombridge Luas - Tyrrelstown
+4451_86139,41,41. Swords Manor - Lower Abbey Street
+4451_86141,41B,41B. Rolestown - Lower Abbey Street
+4451_86142,41C,41C. Swords Manor Via River Valley - Lower Abbey St
+4451_86140,41D,41D. Swords Business Park - Lwr Abbey St
+4451_86143,41X,41X. Swords - UCD Belfield
+4451_86144,42,42. Sand's Hotel Portmarnock - Eden Quay
+4451_86221,42D,42D. Portmarnock - DCU
+4451_86145,43,43. Talbot Street - Swords Business Park
+4451_86147,44,44. Enniskerry - DCU
+4451_86148,44B,44B. Glencullen - Dundrum Luas
+4451_86146,44D,44D. Dundrum - OCS
+4451_86149,46A,46A. Dun Laoghaire - Phoenix Park
+4451_86150,46E,46E. Mountjoy Square - Blackrock Station
+4451_86156,47,47. Poolbeg Street - Belarmine
+4451_86157,49,49. Tallaght (The Square) - Pearse St
+4451_86158,51D,51D. Aston Quay - Clondalkin
+4451_86159,52,52. Intel - Ringsend
+4451_86161,53,53. Dublin Ferryport - Talbot St
+4451_86163,54A,54A. Ellensborough - Pearse St
+4451_86164,56A,56A. Tallaght - Ringsend Rd
+4451_86165,60,60. Forbes Street - Tallaght
+4451_86168,65,65. Poolbeg Street - Blessington/Ballymore
+4451_86166,65A,65A. Route 65A Tallaght Sq - Blessington
+4451_86167,65B,65B. Poolbeg Street - Citywest
+4451_86171,68,68. Newcastle / Greenogue Business Pk - Hawkins St
+4451_86172,68A,68A. Hawkins Street - Bulfin Road
+4451_86169,69,69. Rathcoole - Hawkins St
+4451_86170,69X,69X. Rathcoole - Hawkins St
+4451_86129,70,70. Dunboyne - Burlington Rd
+4451_86131,70D,70D. Dunboyne - DCU
+4451_86173,74,74. Dundrum Luas - Eden Quay
+4451_86174,77A,77A. Citywest - Ringsend
+4451_86119,77X,77X. Citywest - UCD Belfield
+4451_86175,83,83. Kimmage - Harristown
+4451_86176,83A,83A. Stannaway Ave - Harristown Bus Garage
+4451_86178,84,84. Newcastle - Blackrock
+4451_86177,84A,84A. Bray Rail Station - Blackrock
+4451_86190,84X,84X. Hawkins Street - Newcastle / Kilcoole
+4451_86179,99,99. Phoenix Park - Phoenix Park
+4451_86180,116,116. Whitechurch - Parnell Square
+4451_86181,118,118. Kilternan - Eden Quay
+4451_86182,120,120. Ashtown Station - Parnell St
+4451_86184,122,122. Drimnagh - Ashington
+4451_86185,123,123. Marino - Walinstown (Kilnamanagh Rd)
+4451_86186,130,130. Talbot Street - Castle Avenue
+4451_86187,140,140. Palmerston Park - Ballymun (Ikea)
+4451_86189,142,142. Portmarnock - UCD (Belfield)
+4451_86191,145,145. Heuston Rail Station - Ballywaltrim
+4451_86192,150,150. Rossmore - Hawkins Street
+4451_86193,151,151. Foxborough (Balgaddy Rd) - Docklands (East Rd)
+4451_86194,155,155. Bray - IKEA Ballymun
+4451_86219,720,720. Watling Street - Heuston Station
+4451_86203,C1,C1. Adamstown Stn - Sandymount
+4451_86204,C2,C2. Adamstown Stn - Sandymount
+4451_86205,C3,C3. Maynooth - Ringsend
+4451_86206,C4,C4. Maynooth - Ringsend
+4451_86208,C5,C5. Maynooth - Ringsend Night Service
+4451_86207,C6,C6. Maynooth - Celbridge - Ringsend Night Service
+4451_86209,G1,G1. Red Cow LUAS - Spencer Dock
+4451_86210,G2,G2. Liffey Valley SC - Spencer Dock
+4451_86211,H1,H1. Baldoyle - Lower Abbey Street
+4451_86212,H2,H2. Malahide - Lower Abbey Street
+4451_86213,H3,H3. Howth Summit - Lower Abbey Street
+4451_86222,L25,L25. Dun Laoghaire - Dundrum Town Centre
+4451_86115,L53,L53. Liffey Valley - Adamstown Stn
+4451_86223,L54,L54. River Forest - Red Cow Luas
+4451_86224,L58,L58. River Forest - Castletown - Hazelhatch Stn
+4451_86225,L59,L59. River Forest - Celbridge - Hazelhatch
+4451_86214,N4,N4. Blanchardstown - Point Village
+4451_86195,P29,P29. Adamstown Stn - Ringsend
+4451_86215,S2,S2. Sean Moore Road - Heuston Station
+4451_86196,X25,X25. Maynooth - Easton Rd - UCD
+4451_86197,X26,X26. Maynooth - Louisa Bridge - Leeson Street Lower
+4451_86198,X27,X27. Salesian College - Aghards Rd - UCD
+4451_86199,X28,X28. Salesian College - Celbridge Main St - UCD
+4451_86200,X30,X30. Dodsboro - UCD
+4451_86201,X31,X31. River Forest - Earlsfort Terrace
+4451_86202,X32,X32. Leixlip - Earlsfort Terrace
