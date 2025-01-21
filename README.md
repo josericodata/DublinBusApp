@@ -1,11 +1,5 @@
-
-<p align="right">
-    <a href="https://www.dublinbus.ie/" target="_blank">
-        <img src="/assets/images/dublin_bus_logo.png" alt="Dublin Bus Logo" width="200">
-    </a>
-</p>
-  
 # Dublin Bus App
+
 **The Dublin Bus App has been built in an attempt to use real time data using the API's provided by the [National Transport Authority](https://developer.nationaltransport.ie/). Using this app you can see the incoming buses for a selected stop and the buses that currently operate a route based on a direction.**
 
   
@@ -273,6 +267,9 @@ If you find any bug, feel free to contact me by opening a pull request on GitHub
 This app was developed for my portfolio and demonstration purposes only. The results are not guaranteed to be error-free and should not be used for critical decision-making.
 
 <p align="center">
+    <a href="https://www.dublinbus.ie/" target="_blank">
+        <img src="/assets/images/dublin_bus_logo.png" alt="Dublin Bus Logo" width="200">
+    </a>
     <a href="https://www.transportforireland.ie/" target="_blank">
         <img src="/assets/images/tfi_logo.png" alt="TFI Logo" width="200">
     </a>
