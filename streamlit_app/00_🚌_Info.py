@@ -97,7 +97,7 @@ python3 -m venv venvDublinBus
 
 4. Activate the virtual environment:
 ```bash
-source python3 -m venv venvDublinBus/bin/activate
+source venv venvDublinBus/bin/activate
 ```
 
 5. Install requirements:

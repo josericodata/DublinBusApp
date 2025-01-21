@@ -132,7 +132,7 @@ python3 -m venv venvDublinBus
 
 ```bash
 
-source python3 -m venv venvDublinBus/bin/activate
+source venvDublinBus/bin/activate
 
 ```
 
