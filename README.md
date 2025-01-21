@@ -1,11 +1,11 @@
-# Dublin Bus App
+
 <p align="right">
     <a href="https://www.dublinbus.ie/" target="_blank">
         <img src="/assets/images/dublin_bus_logo.png" alt="Dublin Bus Logo" width="200">
     </a>
 </p>
   
-
+# Dublin Bus App
 **The Dublin Bus App has been built in an attempt to use real time data using the API's provided by the [National Transport Authority](https://developer.nationaltransport.ie/). Using this app you can see the incoming buses for a selected stop and the buses that currently operate a route based on a direction.**
 
   
