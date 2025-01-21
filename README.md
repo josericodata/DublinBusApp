@@ -269,7 +269,7 @@ This app was developed for my portfolio and demonstration purposes only. The res
 <p align="center">
     <a href="https://www.dublinbus.ie/" target="_blank">
         <img src="/assets/images/dublin_bus_logo.png" alt="Dublin Bus Logo" width="200">
-    </a>
+    </a><br>
     <a href="https://www.transportforireland.ie/" target="_blank">
         <img src="/assets/images/tfi_logo.png" alt="TFI Logo" width="200">
     </a>
