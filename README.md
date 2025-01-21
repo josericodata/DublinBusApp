@@ -1,7 +1,6 @@
 
-  
 
-# Dublin Bus App
+# Dublin Bus App ![Dublin Bus Logo](/assets/images/dublin_bus_logo.png)  
 
 
   
@@ -272,3 +271,4 @@ If you find any bug, feel free to contact me by opening a pull request on GitHub
 
 This app was developed for my portfolio and demonstration purposes only. The results are not guaranteed to be error-free and should not be used for critical decision-making.
 
+![Transport For Ireland Logo](/assets/images/tfi_logo.png)  
