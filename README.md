@@ -1,5 +1,5 @@
 
-<p align="centered">
+<p align="center">
     <a href="https://www.dublinbus.ie/" target="_blank">
         <img src="/assets/images/dublin_bus_logo.png" alt="Dublin Bus Logo" style="float: right; margin-left: 10px;" width="200">
     </a>
