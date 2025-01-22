@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import folium
@@ -37,23 +38,29 @@ st.write("Visualising real-time stop updates for Dublin buses using JSON formatt
 def visualise_map():
     return folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
-# Visualize stops on the map
+
+# Visualize stops on the map with custom pin icons
 def visualise_stops(stops_df):
     stop_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
+    # Path to the custom pin icon
+    pin_icon_url = os.path.join("assets", "images", "pin.png")
+
     for _, stop in stops_df.iterrows():
         color = "green" if stop["trip_starts"] == 1 else "red" if stop["trip_ends"] == 1 else "blue"
+        
+        # Use the custom pin icon with colored background
+        icon = folium.CustomIcon(
+            icon_image=pin_icon_url,
+            icon_size=(40, 40)  # Adjust the size as needed
+        )
+
+        # Add a marker with the custom pin icon
         folium.Marker(
             location=[stop["stop_lat"], stop["stop_lon"]],
             popup=f"{stop['stop_full']}",
             tooltip=f"{stop['stop_name']}",
-            icon=BeautifyIcon(
-                icon="stop",
-                icon_shape="marker",
-                background_color=color,
-                border_color=color,
-                text_color="white",
-            ),
+            icon=icon
         ).add_to(stop_map)
 
     return stop_map

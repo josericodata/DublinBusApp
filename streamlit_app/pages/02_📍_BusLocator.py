@@ -1,9 +1,9 @@
+import os
 import streamlit as st
 import pandas as pd
 import folium
 from folium.plugins import BeautifyIcon
 from streamlit_folium import st_folium
-import os
 from modules.BLutils import load_routes, load_directions, fetch_buses_by_route_direction
 from modules.Styles import apply_sidebar_styles, apply_dropdown_styles, apply_global_styles, apply_button_styles, apply_table_styles,display_centered_logo, suppress_insecure_request_warnings, apply_map_styles,hide_streamlit_spinner
 
