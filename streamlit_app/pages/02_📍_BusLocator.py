@@ -24,7 +24,7 @@ def visualise_map():
 
 
     # Visualize buses on the map with custom bus icons
-def visualise_buses_with_custom_icons(data):
+def visualise_buses(data):
     bus_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
     # Path to the custom bus icon
