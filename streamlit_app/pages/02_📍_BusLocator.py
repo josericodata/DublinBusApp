@@ -23,33 +23,37 @@ def visualise_map():
     return folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
 
-    # Visualize buses on the map with custom bus icons
-def visualise_buses(data):
-    bus_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
+# Visualize stops on the map with pre-colored pin icons
+def visualise_stops(stops_df):
+    stop_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
-    # Path to the custom bus icon
-    bus_icon_url = os.path.join("assets", "images", "bus.png")
+    # Paths to the pre-colored pin icons
+    icon_paths = {
+        "green": os.path.join("assets", "images", "pin_green.png"),
+        "blue": os.path.join("assets", "images", "pin_blue.png"),
+        "red": os.path.join("assets", "images", "pin_red.png"),
+    }
 
-    for _, row in data.iterrows():
-        lat, lon = row["latitude"], row["longitude"]
+    for _, stop in stops_df.iterrows():
+        # Determine the color based on the stop type
+        color = "green" if stop["trip_starts"] == 1 else "red" if stop["trip_ends"] == 1 else "blue"
+        
+        # Use the pre-colored pin icon
+        icon = folium.CustomIcon(
+            icon_image=icon_paths[color],
+            icon_size=(40, 40)  # Adjust the size as needed
+        )
 
-        if pd.notnull(lat) and pd.notnull(lon):
-            # Use the custom bus icon
-            icon = folium.CustomIcon(
-                icon_image=bus_icon_url,  # Path to the custom icon
-                icon_size=(40, 40)  # Adjust size as needed
-            )
+        # Add a marker with the colored pin icon
+        folium.Marker(
+            location=[stop["stop_lat"], stop["stop_lon"]],
+            popup=f"{stop['stop_full']}",
+            tooltip=f"{stop['stop_name']}",
+            icon=icon
+        ).add_to(stop_map)
 
-            # Add a marker to the map
-            folium.Marker(
-                location=[lat, lon],
-                popup=f"<b>Trip ID:</b> {row['trip_id']}<br>"
-                      f"<b>Vehicle ID:</b> {row['vehicle_id']}<br>"
-                      f"<b>Route ID:</b> {row['route_id']}",
-                icon=icon
-            ).add_to(bus_map)
+    return stop_map
 
-    return bus_map
 
 # Main Streamlit app
 def main():
