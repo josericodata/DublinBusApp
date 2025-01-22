@@ -44,8 +44,8 @@ def visualise_buses(data):
             folium.Marker(
                 location=[lat, lon],
                 popup=f"<b>Trip ID:</b> {row['trip_id']}<br>"
-                      f"<b>Vehicle ID:</b> {row['vehicle_id']}<br>"
-                      f"<b>Route ID:</b> {row['route_id']}",
+                      f"<b>StartTime:</b> {row['start_time']}"
+                      f"<b>Vehicle ID:</b> {row['vehicle_id']}<br>",
                 icon=icon
             ).add_to(bus_map)
 
