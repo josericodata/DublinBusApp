@@ -39,23 +39,28 @@ def visualise_map():
     return folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
 
-# Visualize stops on the map with custom pin icons
+# Visualize stops on the map with pre-colored pin icons
 def visualise_stops(stops_df):
     stop_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
-    # Path to the custom pin icon
-    pin_icon_url = os.path.join("assets", "images", "pin.png")
+    # Paths to the pre-colored pin icons
+    icon_paths = {
+        "green": os.path.join("assets", "images", "pin_green.png"),
+        "blue": os.path.join("assets", "images", "pin_blue.png"),
+        "red": os.path.join("assets", "images", "pin_red.png"),
+    }
 
     for _, stop in stops_df.iterrows():
+        # Determine the color based on the stop type
         color = "green" if stop["trip_starts"] == 1 else "red" if stop["trip_ends"] == 1 else "blue"
         
-        # Use the custom pin icon with colored background
+        # Use the pre-colored pin icon
         icon = folium.CustomIcon(
-            icon_image=pin_icon_url,
+            icon_image=icon_paths[color],
             icon_size=(40, 40)  # Adjust the size as needed
         )
 
-        # Add a marker with the custom pin icon
+        # Add a marker with the colored pin icon
         folium.Marker(
             location=[stop["stop_lat"], stop["stop_lon"]],
             popup=f"{stop['stop_full']}",
@@ -64,6 +69,7 @@ def visualise_stops(stops_df):
         ).add_to(stop_map)
 
     return stop_map
+
 
 # Load Routes
 routes_df = load_routes()
