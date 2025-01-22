@@ -112,7 +112,7 @@ def main():
             else:
 
                 # Map Visualization
-                bus_map, departing_count, returning_count = visualise_buses(bus_data)
+                bus_map = visualise_buses(bus_data)
                 st_folium(bus_map, width=1000, height=700)
 
                 if st.button("🔄 Refresh Bus Data"):
