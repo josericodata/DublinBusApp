@@ -22,33 +22,34 @@ st.set_page_config(
 def visualise_map():
     return folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
-# Visualize buses on the map
-def visualise_buses(data):
+
+    # Visualize buses on the map with custom bus icons
+def visualise_buses_with_custom_icons(data):
     bus_map = folium.Map(location=[53.3498, -6.2603], zoom_start=12)
 
-    departing_count, returning_count = 0, 0
+    # Path to the custom bus icon
+    bus_icon_url = os.path.join("assets", "images", "bus.png")
 
     for _, row in data.iterrows():
         lat, lon = row["latitude"], row["longitude"]
-        direction_id = row["direction_id"]
 
         if pd.notnull(lat) and pd.notnull(lon):
-            if direction_id == 0:
-                departing_count += 1
-                icon = BeautifyIcon(icon="bus", icon_shape="circle", border_color="green", text_color="white", background_color="green", border_width=2)
-            else:
-                returning_count += 1
-                icon = BeautifyIcon(icon="bus", icon_shape="circle", border_color="red", text_color="white", background_color="red", border_width=2)
+            # Use the custom bus icon
+            icon = folium.CustomIcon(
+                icon_image=bus_icon_url,  # Path to the custom icon
+                icon_size=(40, 40)  # Adjust size as needed
+            )
 
+            # Add a marker to the map
             folium.Marker(
-                [lat, lon],
+                location=[lat, lon],
                 popup=f"<b>Trip ID:</b> {row['trip_id']}<br>"
                       f"<b>Vehicle ID:</b> {row['vehicle_id']}<br>"
-                      f"<b>Route ID:</b> {row['route_id']}",                     
-                icon=icon,
+                      f"<b>Route ID:</b> {row['route_id']}",
+                icon=icon
             ).add_to(bus_map)
 
-    return bus_map, departing_count, returning_count
+    return bus_map
 
 # Main Streamlit app
 def main():
