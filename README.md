@@ -200,7 +200,7 @@ The app will be live at `http://localhost:8501`.
 ## 🎬 **Demo**
   
 ### Page 1: Stop Times
-![Stop Times Demo](assets/gifs/StopTimess.gif)
+![Stop Times Demo](assets/gifs/StopTimes.gif)
 
 ### Page 2: Bus Locator
 ![Bus Locator Demo](assets/gifs/BusLocator.gif)
