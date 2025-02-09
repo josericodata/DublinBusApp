@@ -2,7 +2,48 @@
 
 **The Dublin Bus App has been built in an attempt to use real time data using the API's provided by the [National Transport Authority](https://developer.nationaltransport.ie/). Using this app you can see the incoming buses for a selected stop and the buses that currently operate a route based on a direction.**
 
-  
+## 🧬 **Project Structure**
+```bash
+SP500Forecaster  
+├── assets/         
+│   ├── data/
+│   │   ├── Routes.txt
+│   │   ├── StopMapLocation.txt
+│   │   ├── StopTimesPerTrip.txt
+│   │   └── Towards.csv
+│   ├── dataCleaning/
+│   │   ├── 00_EndpointExploration.ipynb
+│   │   ├── 01_DataCleaning.ipynb
+│   │   ├── 02_Flow_01_⌚_StopTimes.ipynb
+│   │   ├── 03_Flow_02_📍_BusLocator.ipynb
+│   │   ├── routes.txt
+│   │   ├── stop_times.txt
+│   │   ├── stops.txt
+│   │   └── trips.txt
+│   ├── gifs/
+│   │   ├── BusLocator.gif
+│   │   └── StopTimes.gif
+│   └── images/ 
+│       ├── bus.png
+│       ├── dublin_bus_favicon.png
+│       ├── dublin_bus_logo.png
+│       ├── pin_blue.png
+│       ├── pin_green.png
+│       ├── pin_red.png
+│       └── tfi_logo.png
+├── streamlit_app/
+│   ├── modules/
+│   │   ├── BLutils.py
+│   │   ├── STutils.py
+│   │   └── Styles.py
+│   ├── pages/               
+│   │   ├── 01_⌚_StopTimes.py
+│   │   └── 02_📍_BusLocator.py
+│   └── 00_🚌_Info.py     
+├── LICENSE                 
+├── README.md               
+└── requirements.txt        
+```
 
 ## 🎯 **Road Map**
 
