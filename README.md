@@ -2,6 +2,8 @@
 
 **The Dublin Bus App has been built in an attempt to use real time data using the API's provided by the [National Transport Authority](https://developer.nationaltransport.ie/). Using this app you can see the incoming buses for a selected stop and the buses that currently operate a route based on a direction.**
 
+---
+
 ## 🧬 **Project Structure**
 ```bash
 DublinBusApp
@@ -45,6 +47,8 @@ DublinBusApp
 └── requirements.txt        
 ```
 
+---
+
 ## 🎯 **Road Map**
 
   
@@ -59,6 +63,7 @@ Plan to develop the app:
 
 - **Design the logic for `StopTimes` and `BusLocator` pages**
 
+---
   
 
 ## 🏗️ **Deployment**
@@ -121,7 +126,7 @@ Plan to develop the app:
 
 - For more details on this logic, refer to the JN: [03_Flow_02_📍_BusLocator.ipynb](https://github.com/josericodata/DublinBusApp/blob/main/assets/dataCleaning/03_Flow_02_📍_BusLocator.ipynb).
 
-  
+---
 
 4. **Streamlit App Creation**:
 
@@ -236,7 +241,7 @@ streamlit run 00_🚌_Info.py
 
 The app will be live at `http://localhost:8501`.
 
-
+---
 
 ## 🎬 **Demo**
   
@@ -246,6 +251,7 @@ The app will be live at `http://localhost:8501`.
 ### Page 2: Bus Locator
 ![Bus Locator Demo](assets/gifs/BusLocator.gif)
 
+---
 
 ## 🔮 **Future Enhancements**
 
@@ -267,7 +273,7 @@ Planned improvements for the Dublin Bus App include:
 
 - **Scalability**: Preparing the app for multi-user support by efficiently handling concurrent queries through the database.
 
-  
+--- 
   
 
 ## 🎓 **Motivation**
@@ -278,7 +284,7 @@ Planned improvements for the Dublin Bus App include:
 
 - Additionally, this project helps me stay up to date with my skills while serving as a valuable addition to my portfolio, showcasing my abilities in handling and processing data effectively.
 
-  
+--- 
 
 ## 🔧 **Environment Setup**
 
@@ -292,14 +298,14 @@ This app has been built and tested in the following environment:
 
 - **Python Version**: Python 3.10.12
 
-  
+---
   
 
-### 🤝 **Open Pull Requests**
+## 🤝 **Open Pull Requests**
 
 If you find any bug, feel free to contact me by opening a pull request on GitHub or via email at **maninastre@gmail.com**.
 
-  
+---
 
 ## ⚠️ **Disclaimer**
 
