@@ -1,10 +1,10 @@
-# Dublin Bus App
+# 🚌 Dublin Bus App
 
 **The Dublin Bus App has been built in an attempt to use real time data using the API's provided by the [National Transport Authority](https://developer.nationaltransport.ie/). Using this app you can see the incoming buses for a selected stop and the buses that currently operate a route based on a direction.**
 
 ## 🧬 **Project Structure**
 ```bash
-SP500Forecaster  
+DublinBusApp
 ├── assets/         
 │   ├── data/
 │   │   ├── Routes.txt
