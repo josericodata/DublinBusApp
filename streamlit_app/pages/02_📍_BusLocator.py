@@ -13,7 +13,7 @@ suppress_insecure_request_warnings()
 
 # Set up Streamlit page config
 st.set_page_config(
-    page_title="Dublin Bus Locator",
+    page_title="Streamlit Dublin Bus Locator",
     page_icon="assets/images/dublin_bus_favicon.png",
     layout="centered",
 )

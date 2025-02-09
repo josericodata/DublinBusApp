@@ -4,7 +4,7 @@ from modules.Styles import apply_sidebar_styles, apply_info_styles, display_cent
 
 # MUST BE FIRST Streamlit command
 st.set_page_config(
-    page_title="Dublin Bus App",
+    page_title="Streamlit Dublin Bus Tracking App",
     page_icon="assets/images/dublin_bus_favicon.png",
     layout="centered",
 )
