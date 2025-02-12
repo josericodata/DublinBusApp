@@ -3,6 +3,7 @@ import re
 import zipfile
 import requests
 import pandas as pd
+import streamlit as st
 
 ### 12-02-2025 Final fix for the NTA static data 😎 🚀 
 
@@ -10,6 +11,7 @@ import pandas as pd
 GTFS_URL = "https://www.transportforireland.ie/transitData/Data/GTFS_Dublin_Bus.zip"
 
 # Step 1: Download GTFS ZIP file into memory
+@st.cache_data
 def fetch_gtfs_data(url):
     response = requests.get(url)
     if response.status_code == 200:
@@ -18,11 +20,13 @@ def fetch_gtfs_data(url):
         raise RuntimeError("Failed to download GTFS data.")
 
 # Step 2: Read a file from the ZIP directly into a DataFrame
+@st.cache_data
 def read_txt_from_zip(zip_file, filename):
     with zip_file.open(filename) as file:
         return pd.read_csv(file)
 
 # Step 3: Process routes.txt
+@st.cache_data
 def process_routes(routes_df):
     """Processes routes.txt and adds a concatenated route name."""
     cleaned_routes = routes_df[["route_id", "route_short_name", "route_long_name"]].copy()
@@ -46,6 +50,7 @@ def process_routes(routes_df):
     return cleaned_routes
 
 # Step 4: Process trips.txt
+@st.cache_data
 def process_trips(trips_df):
     """Process trips.txt to create Towards.txt with unique route_id, trip_headsign, and direction_id."""
     return trips_df[['route_id', 'trip_id', 'trip_headsign', 'direction_id']] \
@@ -53,6 +58,7 @@ def process_trips(trips_df):
         .sort_values(by='route_id')
 
 # Step 5: Process stop_times.txt
+@st.cache_data
 def process_stop_times(stop_times_df, trips_df, routes_df):
     """Processes stop_times.txt and merges with trips and routes to create StopTimesPerTrip.txt."""
     
@@ -61,6 +67,7 @@ def process_stop_times(stop_times_df, trips_df, routes_df):
     return stop_times_df[["trip_id", "stop_id", "arrival_time"]].copy()
 
 # Step 6: Process StopMapLocation.txt
+@st.cache_data
 def process_stop_map_location(stop_times_df, stops_df, SelectDirection_df):
     """Processes stops.txt and stop_times.txt to generate StopMapLocation.txt."""
     
