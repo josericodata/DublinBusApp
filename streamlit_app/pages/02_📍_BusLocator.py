@@ -1,14 +1,4 @@
-import os
 import streamlit as st
-import pandas as pd
-import folium
-from streamlit_folium import st_folium
-from modules.BLutils import load_routes, load_directions, fetch_buses_by_route_direction
-from modules.Styles import apply_sidebar_styles, apply_dropdown_styles, apply_global_styles, apply_button_styles, apply_table_styles,display_centered_logo, suppress_insecure_request_warnings, apply_map_styles,hide_streamlit_spinner
-
-
-# Suppress warnings globally
-suppress_insecure_request_warnings()
 
 # Set up Streamlit page config
 st.set_page_config(
@@ -16,6 +6,16 @@ st.set_page_config(
     page_icon="assets/images/dublin_bus_favicon.png",
     layout="centered",
 )
+
+import os
+import pandas as pd
+import folium
+from streamlit_folium import st_folium
+from modules.BLutils import load_routes, load_directions, fetch_buses_by_route_direction
+from modules.Styles import apply_sidebar_styles, apply_dropdown_styles, apply_global_styles, apply_button_styles, apply_table_styles,display_centered_logo, suppress_insecure_request_warnings, apply_map_styles,hide_streamlit_spinner
+
+# Suppress warnings globally
+suppress_insecure_request_warnings()
 
 # Visualize map without buses
 def visualise_map():
