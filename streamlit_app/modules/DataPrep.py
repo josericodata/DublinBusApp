@@ -11,14 +11,22 @@ GTFS_URL = "https://www.transportforireland.ie/transitData/Data/GTFS_Dublin_Bus.
 def fetch_gtfs_data(url):
     response = requests.get(url)
     if response.status_code == 200:
-        return zipfile.ZipFile(io.BytesIO(response.content), "r")
+        zip_file = zipfile.ZipFile(io.BytesIO(response.content), "r")
+        print(zip_file.namelist())  # Print the list of files in the ZIP
+        return zip_file
     else:
         raise RuntimeError("Failed to download GTFS data.")
 
 # Step 2: Read a file from the ZIP directly into a DataFrame
 def read_txt_from_zip(zip_file, filename):
-    with zip_file.open(filename) as file:
-        return pd.read_csv(file)
+    if isinstance(zip_file, zipfile.ZipFile):
+        try:
+            with zip_file.open(filename) as file:
+                return pd.read_csv(file)
+        except KeyError:
+            raise RuntimeError(f"File '{filename}' not found in the ZIP archive.")
+    else:
+        raise TypeError("Expected a ZipFile object.")
 
 # Step 3: Process routes.txt
 def process_routes(routes_df):
