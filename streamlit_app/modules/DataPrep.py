@@ -10,14 +10,18 @@ import streamlit as st
 # Define GTFS URL
 GTFS_URL = "https://www.transportforireland.ie/transitData/Data/GTFS_Dublin_Bus.zip"
 
-# Step 1: Download GTFS ZIP file into memory
+# Step 1: Download and Extract GTFS ZIP file
 @st.cache_data
 def fetch_gtfs_data(url):
     response = requests.get(url)
     if response.status_code == 200:
-        return zipfile.ZipFile(io.BytesIO(response.content), "r")
+        with zipfile.ZipFile(io.BytesIO(response.content), "r") as zf:
+            # Extract and return the file contents as a dictionary
+            gtfs_files = {name: zf.read(name).decode("utf-8") for name in zf.namelist()}
+        return gtfs_files
     else:
         raise RuntimeError("Failed to download GTFS data.")
+
 
 # Step 2: Read a file from the ZIP directly into a DataFrame
 @st.cache_data
