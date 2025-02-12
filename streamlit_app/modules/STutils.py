@@ -1,8 +1,9 @@
+import pytz
 import requests
 import pandas as pd
-import pytz
-from datetime import datetime, timedelta
 import streamlit as st
+from datetime import datetime, timedelta
+from modules.DataPrep import Routes, Towards, StopMapLocation, StopTimesPerTrip
 
 # Securely load the API from key st.secrets
 YOUR_API_KEY = st.secrets["API_KEY"]
@@ -13,22 +14,17 @@ GTFSR_API_URL = "https://api.nationaltransport.ie/gtfsr/v2/gtfsr?format=json"
 # Load Routes Data
 @st.cache_data
 def load_routes():
-    file_path = "assets/data/Routes.txt"
-    return pd.read_csv(file_path)
+    return Routes  # Directly returning the DataFrame from DataPrep.py
 
 # Load Directions Data
 @st.cache_data
 def load_directions(route_id):
-    file_path = "assets/data/Towards.txt"
-    df = pd.read_csv(file_path)
-    return df[df["route_id"] == route_id]
+    return Towards[Towards["route_id"] == route_id]
 
 # Load Stops Data filtered by trip_id
 @st.cache_data
 def load_stops(trip_id):
-    file_path = "assets/data/StopMapLocation.txt"
-    df = pd.read_csv(file_path)
-    filtered_stops = df[df["trip_id"] == trip_id].copy()
+    filtered_stops = StopMapLocation[StopMapLocation["trip_id"] == trip_id].copy()
     filtered_stops["stop_full"] = filtered_stops["stop_code"].astype(str) + " - " + filtered_stops["stop_name"]
     return filtered_stops
 
@@ -83,11 +79,10 @@ def process_gtfsr_data(data, concat):
 
     return pd.DataFrame(trips)
 
-# Load StopTimesPerTrip.txt
+# Load Stop Times Per Trip Data
 @st.cache_data
 def load_stop_times_per_trip():
-    file_path = "assets/data/StopTimesPerTrip.txt"
-    return pd.read_csv(file_path)
+    return StopTimesPerTrip  # Directly return the DataFrame
 
 # Calculate Minutes Left
 def calculate_minutes_left(arrival_time):

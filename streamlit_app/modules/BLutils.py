@@ -1,22 +1,22 @@
 import requests
 import pandas as pd
 import streamlit as st
-
+from modules.DataPrep import Routes, Towards  # Import the preprocessed DataFrames
 # Securely load the API from key st.secrets
 YOUR_API_KEY = st.secrets["API_KEY"]
 
 # API details
 API_URL = "https://api.nationaltransport.ie/gtfsr/v2/Vehicles?format=json"
 
-# Load Routes.txt
+# Load Routes Data
 @st.cache_data
 def load_routes():
-    return pd.read_csv("assets/data/Routes.txt")
+    return Routes  # Directly return the DataFrame
 
-# Load Towards.txt
+# Load Directions Data
 @st.cache_data
 def load_directions():
-    return pd.read_csv("assets/data/Towards.txt")
+    return Towards  # Directly return the DataFrame
 
 # Fetch Vehicles Data
 @st.cache_data(ttl=60)

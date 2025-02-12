@@ -168,7 +168,7 @@ cd DublinBusApp
 
 ```bash
 
-python3 -m venv venvDublinBus
+python3 -m venvDublinBus
 
 ```
 
