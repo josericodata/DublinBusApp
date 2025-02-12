@@ -9,6 +9,9 @@ st.set_page_config(
     layout="centered",
 )
 
+# Suppress warnings and errors
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('client.showErrorDetails', False)
 # Apply styles AFTER set_page_config
 apply_sidebar_styles()
 apply_info_styles()

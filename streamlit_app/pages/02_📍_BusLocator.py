@@ -17,6 +17,10 @@ from modules.Styles import apply_sidebar_styles, apply_dropdown_styles, apply_gl
 # Suppress warnings globally
 suppress_insecure_request_warnings()
 
+# Suppress warnings and errors
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('client.showErrorDetails', False)
+
 # Visualize map without buses
 def visualise_map():
     return folium.Map(location=[53.3498, -6.2603], zoom_start=12)

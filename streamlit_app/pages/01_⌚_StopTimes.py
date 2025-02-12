@@ -10,11 +10,15 @@ st.set_page_config(
 import os
 import folium
 from streamlit_folium import st_folium
-from modules.STutils import load_routes, load_directions, load_stops, get_upcoming_buses,convert_gtfs_time
+from modules.STutils import load_routes, load_directions, load_stops, get_upcoming_buses
 from modules.Styles import apply_sidebar_styles, apply_dropdown_styles, apply_global_styles, apply_button_styles, apply_table_styles, display_centered_logo, suppress_insecure_request_warnings, apply_map_styles, hide_streamlit_spinner
 
 # Suppress warnings globally
 suppress_insecure_request_warnings()
+
+# Suppress warnings and errors
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('client.showErrorDetails', False)
 
 # Apply styles
 hide_streamlit_spinner()
