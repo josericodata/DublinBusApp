@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime
+from modules.Styles import suppress_insecure_request_warnings
 from modules.Styles import apply_sidebar_styles, apply_info_styles, display_centered_logo
 
 # MUST BE FIRST Streamlit command
@@ -9,9 +10,9 @@ st.set_page_config(
     layout="centered",
 )
 
-# Suppress warnings and errors
-st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_option('client.showErrorDetails', False)
+# Suppress warnings globally
+suppress_insecure_request_warnings()
+
 # Apply styles AFTER set_page_config
 apply_sidebar_styles()
 apply_info_styles()
