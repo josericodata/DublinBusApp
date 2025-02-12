@@ -35,7 +35,9 @@ DublinBusApp
 │       └── tfi_logo.png
 ├── streamlit_app/
 │   ├── modules/
+│   │   ├── __init__.py
 │   │   ├── BLutils.py
+│   │   ├── DataPrep.py
 │   │   ├── STutils.py
 │   │   └── Styles.py
 │   ├── pages/               
@@ -98,7 +100,7 @@ Plan to develop the app:
 
 4. `trips.txt`
 
-- These files will be used to generate the following files required for our app:
+- These files will be used to generate the following new files:
 
 1. `Routes.txt`
 
@@ -109,6 +111,8 @@ Plan to develop the app:
 4. `Towards.txt`
 
 - To visualise this step, I have created a JN: [01_DataCleaning.ipynb](https://github.com/josericodata/DublinBusApp/blob/main/assets/dataCleaning/01_DataCleaning.ipynb).
+
+- **The files mentioned above were used in the early stages of this project. However, since the NTA updates `GTFS_Dublin_Bus.zip` almost every week, maintaining the app required frequent updates. To simplify this process, I created [DataPrep.py](https://github.com/josericodata/DublinBusApp/blob/main/streamlit_app/modules/DataPrep.py). With this script, every time the app runs, it fetches fresh data from [GTFS Dublin Bus Data](https://www.transportforireland.ie/transitData/Data/GTFS_Dublin_Bus.zip). I am keeping the old `.txt` files in case they help someone better understand this complex process.**
 
 3. **Logic Design for `StopTimes` and `BusLocator` Pages**:
 
