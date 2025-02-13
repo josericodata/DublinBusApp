@@ -10,9 +10,6 @@ st.set_page_config(
     layout="centered",
 )
 
-# Suppress warnings globally
-suppress_insecure_request_warnings()
-
 # Apply styles AFTER set_page_config
 apply_sidebar_styles()
 apply_info_styles()
