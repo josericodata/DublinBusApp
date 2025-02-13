@@ -1,6 +1,5 @@
 import streamlit as st
 from datetime import datetime
-from modules.Styles import suppress_insecure_request_warnings
 from modules.Styles import apply_sidebar_styles, apply_info_styles, display_centered_logo
 
 # MUST BE FIRST Streamlit command
