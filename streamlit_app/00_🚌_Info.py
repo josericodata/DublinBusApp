@@ -99,7 +99,7 @@ cd DublinBusApp
 
 3. Create a virtual environment:
 ```bash
-python3 -m venvDublinBus
+python3 -m venv venvDublinBus
 ```
 
 4. Activate the virtual environment:
