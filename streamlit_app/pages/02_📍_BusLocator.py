@@ -18,7 +18,7 @@ st.set_page_config(
     layout="centered",
 )
 
-DATA_PREP_SCRIPT = "modules/DataPrep.py"
+DATA_PREP_SCRIPT = "streamlit_app/modules/DataPrep.py"
 RESET_INTERVAL = 86400  # 24 hours in seconds
 
 if "last_data_refresh" not in st.session_state:
