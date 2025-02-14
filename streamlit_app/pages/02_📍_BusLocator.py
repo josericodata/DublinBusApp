@@ -1,4 +1,6 @@
 import os
+import time
+import subprocess
 import folium
 import pandas as pd
 import streamlit as st
@@ -15,6 +17,26 @@ st.set_page_config(
     page_icon="assets/images/dublin_bus_favicon.png",
     layout="centered",
 )
+
+DATA_PREP_SCRIPT = "DataPrep.py"
+RESET_INTERVAL = 86400  # 24 hours in seconds
+
+if "last_data_refresh" not in st.session_state:
+    st.session_state.last_data_refresh = 0  # Initialize if not set
+
+def run_data_prep():
+    """Runs DataPrep.py and updates the last execution timestamp."""
+    try:
+        subprocess.run(["python", DATA_PREP_SCRIPT], check=True)
+        st.session_state.last_data_refresh = time.time()
+        st.toast("🔄 Data refreshed successfully!")
+    except subprocess.CalledProcessError as e:
+        st.error(f"⚠️ Error running {DATA_PREP_SCRIPT}: {e}")
+
+# Check if 24 hours have passed or if the script is freshly loaded
+if time.time() - st.session_state.last_data_refresh > RESET_INTERVAL:
+    run_data_prep()
+
 
 # Visualize map without buses
 def visualise_map():
