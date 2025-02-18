@@ -271,6 +271,15 @@ The app will be live at `http://localhost:8501`.
 
 ---
 
+### ▶️ Watch the YouTube Tutorial
+
+
+[![Streamlit Bus Tracking App with GTFS, Folium & Python](https://img.youtube.com/vi/PaU5KaZCJ5E/maxresdefault.jpg)](https://www.youtube.com/watch?v=PaU5KaZCJ5E "Click to play")
+
+Click the image above or [here](https://www.youtube.com/watch?v=PaU5KaZCJ5E) to watch the video on YouTube.
+
+---
+
 ## 🔮 **Future Enhancements**
 
   
