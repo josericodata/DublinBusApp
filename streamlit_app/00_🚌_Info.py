@@ -68,7 +68,7 @@ Plan to develop the app:
 
 3. **What is GTFS?**
 
-- Summarising point 1 and 2, the **General Transit Feed Specification (GTFS)** is a standardized format for public transportation data, allowing transit agencies to share schedules, routes, and real-time updates. It consists of structured text files (CSV format) that define agencies, stops, routes, trips, and schedules.
+- Summarising point 1 and 2, the **General Transit Feed Specification (GTFS)** is a standardised format for public transportation data, allowing transit agencies to share schedules, routes, and real-time updates. It consists of structured text files that define agencies, stops, routes, trips, and schedules.
 
 🔹 **GTFS Data Types:**
 
