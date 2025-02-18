@@ -114,7 +114,19 @@ Plan to develop the app:
 
 - **The files mentioned above were used in the early stages of this project. However, since the NTA updates `GTFS_Dublin_Bus.zip` almost every week, maintaining the app required frequent updates. To simplify this process, I created [DataPrep.py](https://github.com/josericodata/DublinBusApp/blob/main/streamlit_app/modules/DataPrep.py). With this script, every time the app runs, it fetches fresh data from [GTFS Dublin Bus Data](https://www.transportforireland.ie/transitData/Data/GTFS_Dublin_Bus.zip). I am keeping the old `.txt` files in case they help someone better understand this complex process.**
 
-3. **Logic Design for `StopTimes` and `BusLocator` Pages**:
+3. **What is GTFS?**
+
+- Summarising point 1 and 2 the **General Transit Feed Specification (GTFS)** is a standardised format for public transportation data, allowing transit agencies to share schedules, routes, and real-time updates. It consists of structured text files (CSV format) that define agencies, stops, routes, trips, and schedules.
+
+### 🔹 GTFS Data Types
+
+- **GTFS Static**: Provides fixed schedules, routes, and stop locations.  
+- **GTFS Realtime**: Delivers live updates on vehicle positions, delays, and service alerts.
+
+- For more details, visit the official GTFS website: [GTFS.org](https://gtfs.org/)
+
+
+4. **Logic Design for `StopTimes` and `BusLocator` Pages**:
 
 - After understanding the data provided by the endpoints and the static files, it is time to develop the logic for the pages.
 
@@ -132,7 +144,7 @@ Plan to develop the app:
 
 ---
 
-4. **Streamlit App Creation**:
+5. **Streamlit App Creation**:
 
 - After completing the steps above, the final app can be found at: [streamlit_app](https://github.com/josericodata/DublinBusApp/tree/main/streamlit_app).
 
