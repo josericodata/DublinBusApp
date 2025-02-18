@@ -116,12 +116,14 @@ Plan to develop the app:
 
 3. **What is GTFS?**
 
-- Summarising point 1 and 2 the **General Transit Feed Specification (GTFS)** is a standardised format for public transportation data, allowing transit agencies to share schedules, routes, and real-time updates. It consists of structured text files (CSV format) that define agencies, stops, routes, trips, and schedules.
+- Summarising point 1 and 2, the **General Transit Feed Specification (GTFS)** is a standardized format for public transportation data, allowing transit agencies to share schedules, routes, and real-time updates. It consists of structured text files (CSV format) that define agencies, stops, routes, trips, and schedules.
 
-🔹**GTFS Data Types:**
+🔹 **GTFS Data Types:**
 
-- **GTFS Realtime**: Delivers live updates on vehicle positions, delays, and service alerts. `GTFSR` and `Vehicles` endpoints.
-- **GTFS Static**: Provides fixed schedules, routes, and stop locations. `GTFS_Dublin_Bus.zip`.
+| Type            | Description |
+|----------------|------------|
+| **GTFS Realtime** | Delivers live updates on vehicle positions, delays, and service alerts. Uses `GTFSR` and `Vehicles` endpoints. |
+| **GTFS Static**   | Provides fixed schedules, routes, and stop locations. Uses `GTFS_Dublin_Bus.zip`. |
 
 - For more details, visit the official GTFS website: [GTFS.org](https://gtfs.org/)
 
